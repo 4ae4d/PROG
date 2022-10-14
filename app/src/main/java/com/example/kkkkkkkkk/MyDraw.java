@@ -52,10 +52,12 @@ public class MyDraw extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(5);
 
-        Random rand = new Random();
-        array = new int[canvas.getHeight() / (r + ro)]
-                [canvas.getWidth() / (r + ro)];
+
+
         if (initial) {
+            Random rand = new Random();
+            array = new int[canvas.getHeight() / (r + ro)]
+                    [canvas.getWidth() / (r + ro)];
             for (int i = 0; i < array.length; i++) {
                 for (int j = 0; j < array[0].length; j++) {
                     array[i][j] = rand.nextInt(2);
